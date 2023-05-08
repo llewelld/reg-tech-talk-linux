@@ -11,7 +11,7 @@ presentation to be given as a REG Lunchtime Tech Talk.
 
 ## Schedule
 
-Tuesday 9th May 2023, 12:00 -- 13:00
+Tuesday 9th May 2023, 12:30 -- 13:30 BST
 
 ## Prebuilt slides
 
