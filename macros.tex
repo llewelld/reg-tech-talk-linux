@@ -1,0 +1,139 @@
+% Imports
+\usepackage{listings}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pythonhighlight}
+\usepackage{pgfpages}
+\usepackage{tabularx}
+
+\mode<handout>{%
+	\pgfpagesuselayout{8 on 1}[a4paper,border shrink=5mm]
+	\setbeameroption{show notes}
+}
+
+% Graphics configuration
+\graphicspath{{./graphics/}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg,.pdf}
+
+% Useful macros
+\def\etal{{\it et al.}}
+\def\etc{{\it etc.}}
+\def\eg{{\it e.g.}}
+\def\ie{{\it i.e.}}
+\def\cf{{\it cf.}}
+\def\qv{{\it q.v.}}
+\def\qqv{{\it qq.v.}}
+\def\st{s.t.\ }
+\def\code{\tt}
+\def\setsep{:}
+\def\concat{\mathbin{|}}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\prescite}[1]{\footnote{\cite{#1}}}
+\newcommand{\prestext}[1]{\footnotetext{\cite{#1}}}
+\newcommand{\emaillink}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+
+\setlength{\parskip}{0.5em}
+
+% Tables
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\tiny}p{#1}}
+
+% Program listings
+\definecolor{listingbaground}{rgb}{.9,.9,.9}
+
+\lstset{
+	language=C,
+	backgroundcolor=\color{listingbaground},
+	extendedchars=true,
+	basicstyle=\fontsize{5pt}{6pt}\ttfamily,
+	showstringspaces=false,
+	showspaces=false,
+	numbers=left,
+	numberstyle=\fontsize{5pt}{6pt}\ttfamily\color{gray},
+	numbersep=5pt,
+	tabsize=2,
+	breaklines=true,
+	showtabs=false,
+	captionpos=b,
+	xleftmargin=5mm,
+	escapeinside={££}{££},
+	framexleftmargin=5mm
+}
+
+% https://tex.stackexchange.com/questions/89574/language-option-supported-in-listings
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this},
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+\lstdefinelanguage{QML}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, id, property, bool, string, int, decimal, target},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={Page, Example, Timer, Column, PageHeader, TextSwitch, Label},
+	ndkeywordstyle=\color{teal}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=true,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{green}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+\lstdefinelanguage{cpp}{
+	keywords={class, public, private, try, throw, catch, this, return, null, switch, if, while, do, else, case, break, for, bool, void, const},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={Q_OBJECT, Q_CLASSINFO, Q_PROPERTY, Q_SLOTS, Q_SIGNALS, signals, slots, READ, WRITE, NOTIFY},
+	ndkeywordstyle=\color{teal}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+\lstdefinelanguage{sh2}{
+	keywords={dbus, send, zypper, python3},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={session, type, print, reply, dest},
+	ndkeywordstyle=\color{teal}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{\#},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+% To allow the theme files to be placed in a subdirectory
+\makeatletter
+	\def\beamer@calltheme#1#2#3{%
+		\def\beamer@themelist{#2}
+		\@for\beamer@themename:=\beamer@themelist\do
+		{\usepackage[{#1}]{\beamer@themelocation/#3\beamer@themename}}}
+
+	\def\usefolder#1{
+		\def\beamer@themelocation{#1}
+	}
+	\def\beamer@themelocation{}
+
+
+
+
