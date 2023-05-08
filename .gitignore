@@ -1,3 +1,8 @@
+## Project specific
+linux-on-smartphone.pdf
+resources/devices/
+slides.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
