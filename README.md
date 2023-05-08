@@ -13,6 +13,12 @@ presentation to be given as a REG Lunchtime Tech Talk.
 
 Tuesday 9th May 2023, 12:00 -- 13:00
 
+## Prebuilt slides
+
+The built slides are available in PDF format from:
+
+https://www.flypig.co.uk/presentations/linux-on-smartphone.pdf
+
 ## Building the presentation into a PDF
 
 Requirements:
